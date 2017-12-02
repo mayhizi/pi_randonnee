@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import com.lynden.gmapsfx.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="834.0" prefWidth="1256.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Rand_WrapController">
+    <stylesheets>
+        <URL value="@/styles/rand_wrap.css" />
+    </stylesheets>
+   <children>
+      <TabPane prefHeight="955.0" prefWidth="1405.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Ajouter">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1001.0" prefWidth="1257.0">
+                     <children>
+                        <ImageView fitHeight="924.0" fitWidth="1333.0" layoutX="6.0" layoutY="-55.0" opacity="0.4" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/sac-randonnée.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imageview2" fitHeight="109.0" fitWidth="119.0" layoutX="162.0" layoutY="335.0" pickOnBounds="true" preserveRatio="true" />
+                        <WebView fx:id="field_rand_mapview" layoutX="653.0" layoutY="7.0" prefHeight="577.0" prefWidth="593.0" />
+                        <Label layoutX="13.0" layoutY="149.0" prefHeight="24.0" prefWidth="123.0" text="Nom:">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="16.0" layoutY="195.0" prefHeight="17.0" prefWidth="85.0" text="Prix:">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="243.0" prefHeight="17.0" prefWidth="79.0" text="Type:">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="11.0" layoutY="288.0" prefHeight="17.0" prefWidth="70.0" text="Date:">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="field_rand_destination" layoutX="148.0" layoutY="99.0" />
+                        <JFXTextField fx:id="field_rand_nom" layoutX="148.0" layoutY="150.0" />
+                      
+                        <DatePicker fx:id="field_rand_date" layoutX="150.0" layoutY="289.0" prefHeight="25.0" prefWidth="143.0" />
+                       <JFXTextField fx:id="field_rand_prix" layoutX="152.0" layoutY="184.0" />
+                        <Label layoutX="6.0" layoutY="111.0" prefHeight="27.0" prefWidth="123.0" text="Destination:">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="304.0" layoutY="657.0" mnemonicParsing="false" onAction="#ActionAjout" prefHeight="31.0" prefWidth="110.0" text="Ajouter">
+                           <textFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop color="BLACK" />
+                                    <Stop color="#220707" offset="1.0" />
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                        </Button>
+                        <ImageView fitHeight="92.0" fitWidth="157.0" layoutX="162.0" layoutY="492.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label layoutX="336.0" layoutY="235.0" text="Description:">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="345.0" layoutY="147.0" text="Fin:">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="340.0" layoutY="106.0" text="Début:">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="344.0" layoutY="192.0" text="Nb_places:">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="field_rand_description" layoutX="450.0" layoutY="241.0" prefHeight="109.0" prefWidth="200.0" />
+                        <JFXTextField fx:id="field_rand_place" layoutX="470.0" layoutY="188.0" />
+                        <JFXTextField fx:id="field_rand_fin" layoutX="469.0" layoutY="141.0" />
+                        <JFXTextField fx:id="field_rand_debut" layoutX="470.0" layoutY="100.0" />
+                        <Button fx:id="field_rand_photo" layoutX="2.0" layoutY="377.0" mnemonicParsing="false" onAction="#Actionphoto" text="Ajouter une photo" />
+                        <Label layoutX="183.0" layoutY="24.0" text="Ajouter randonnée" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="36.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="field_rand_type" layoutX="151.0" layoutY="236.0" prefHeight="25.0" prefWidth="137.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Mes Randonnées">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="897.0" prefWidth="1377.0">
+                     <children>
+                        <ImageView fitHeight="982.0" fitWidth="1504.0" layoutX="-130.0" layoutY="-43.0" opacity="0.7" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/sac-randonnée.jpg" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="list_rands_table" layoutX="720.0" layoutY="87.0" prefHeight="361.0" prefWidth="552.0" />
+                        <Button fx:id="modif_rand_button" layoutX="903.0" layoutY="463.0" mnemonicParsing="false" onAction="#modifierRand" prefHeight="25.0" prefWidth="73.0" text="modifier" />
+                        <DatePicker fx:id="field_rand_date_modif" layoutX="161.0" layoutY="356.0" prefHeight="25.0" prefWidth="143.0" />
+                        <TextArea fx:id="field_rand_description_modif" layoutX="503.0" layoutY="267.0" prefHeight="102.0" prefWidth="206.0" />
+                        <Label alignment="CENTER" layoutX="233.0" layoutY="38.0" prefHeight="35.0" prefWidth="273.0" text="Modifier Randonnée" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="24.0" layoutY="355.0" text="Date:" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font></Label>
+                        <Label layoutX="394.0" layoutY="124.0" text="Début:" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font></Label>
+                        <Label layoutX="399.0" layoutY="169.0" prefHeight="17.0" prefWidth="85.0" text="Fin:" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font></Label>
+                        <Label layoutX="397.0" layoutY="266.0" text="Description:" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font></Label>
+                        <TextField fx:id="chercher_field" layoutX="1014.0" layoutY="26.0" />
+                        <Button layoutX="872.0" layoutY="26.0" mnemonicParsing="false" text="chercher" />
+                        <Label layoutX="24.0" layoutY="317.0" text="Type:" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="21.0" layoutY="266.0" prefHeight="17.0" prefWidth="36.0" text="Prix:">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="21.0" layoutY="219.0" text="Destination:" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="121.0" prefHeight="30.0" prefWidth="120.0" text="ID_randonnée" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="23.0" layoutY="173.0" text="Nom:" textFill="#0d0d0d">
+                           <font>
+                              <Font name="System Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXTextField fx:id="field_rand_debut_modif" layoutX="514.0" layoutY="117.0" />
+                        <JFXTextField fx:id="field_rand_destination_modif" layoutX="165.0" layoutY="212.0" />
+                        <JFXTextField fx:id="field_rand_nom_modif" layoutX="165.0" layoutY="161.0" />
+                        <JFXTextField fx:id="field_rand_id_modif" layoutX="165.0" layoutY="116.0" />
+                        <JFXTextField fx:id="field_rand_fin_modif" layoutX="514.0" layoutY="167.0" />
+                        <JFXTextField fx:id="field_rand_place_modif" layoutX="514.0" layoutY="213.0" />
+                        <Label layoutX="394.0" layoutY="220.0" text="Nb_places:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="sup_rand_button" layoutX="1050.0" layoutY="463.0" mnemonicParsing="false" onAction="#supRand" prefHeight="25.0" prefWidth="94.0" text="Supprimer" />
+                        
+                        <ComboBox fx:id="field_rand_type_modif" layoutX="158.0" layoutY="317.0" prefWidth="150.0" />
+                        <JFXTextField fx:id="field_rand_prix_modif" layoutX="165.0" layoutY="267.0" />
+                        
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

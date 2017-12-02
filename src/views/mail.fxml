@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="581.0" prefWidth="698.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MailController">
+    <stylesheets>
+        <URL value="@/styles/mail.css" />
+    </stylesheets>
+   <children>
+      <JFXButton fx:id="btn_Mail" layoutX="271.0" layoutY="424.0" onAction="#sendMail" text="Envoyer" textFill="#542020">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </JFXButton>
+      <TextArea fx:id="messagetf" layoutX="192.0" layoutY="222.0" prefHeight="169.0" prefWidth="288.0" />
+      <TextField fx:id="sujettf" layoutX="192.0" layoutY="180.0" prefHeight="25.0" prefWidth="288.0" />
+      <TextField fx:id="emailtf" layoutX="192.0" layoutY="105.0" prefHeight="45.0" prefWidth="288.0" />
+      <Label layoutX="78.0" layoutY="252.0" text="Message" textFill="#3c3737">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="176.0" text="Sujet" textFill="#433e3e">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="91.0" layoutY="111.0" text="E-mail" textFill="#363030">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="retour_mail" layoutX="573.0" layoutY="511.0" mnemonicParsing="false" onAction="#ActionRetourMail" text="Retour" />
+      <ImageView fitHeight="64.0" fitWidth="80.0" layoutX="585.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/grey_new_seo-02-512.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="92.0" fitWidth="102.0" layoutX="497.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/mail-icon%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="98.0" fitWidth="125.0" layoutX="563.0" layoutY="124.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/Mail-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="77.0" fitWidth="90.0" layoutX="497.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/mail-icon-logo-28FE0635D0-seeklogo.com.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="618.0" prefWidth="863.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MapController">
+    <stylesheets>
+        <URL value="@/styles/map.css" />
+    </stylesheets>
+   <children>
+      <WebView fx:id="Web_map" layoutX="20.0" layoutY="66.0" prefHeight="486.0" prefWidth="774.0" />
+      <TextField fx:id="field_destination" layoutX="212.0" layoutY="20.0" />
+      <Button fx:id="retour_map_id" layoutX="669.0" layoutY="562.0" mnemonicParsing="false" onAction="#ActionRetourMap" prefHeight="25.0" prefWidth="80.0" text="Retour" />
+      <Label layoutX="56.0" layoutY="19.0" text="Destination:">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

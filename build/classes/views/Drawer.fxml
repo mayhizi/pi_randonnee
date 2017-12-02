@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="id_vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="705.0" prefWidth="273.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DrawerController">
+   <children>
+      <JFXButton fx:id="id_button_gestion" onAction="#button_gestion_rand" prefHeight="159.0" prefWidth="273.0" text="Gestion des randonnées" textFill="#28822d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></JFXButton>
+      <JFXButton prefHeight="179.0" prefWidth="274.0" text="Gestion des evénements" textFill="#28822d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton prefHeight="174.0" prefWidth="273.0" text="Gestion des équipements" textFill="#28822d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton prefHeight="184.0" prefWidth="290.0" text="Réclamations" textFill="#28822d">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
+</VBox>

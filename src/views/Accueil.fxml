@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchrpane" prefHeight="759.0" prefWidth="1148.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.AccueilController">
+    <stylesheets>
+        <URL value="@/styles/accueil.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="907.0" fitWidth="1416.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/pexels-photo.jpg" />
+         </image>
+      </ImageView>
+      <JFXHamburger fx:id="id_burger" layoutX="1281.0" layoutY="33.0" prefHeight="45.0" prefWidth="48.0" />
+      <JFXDrawer fx:id="id_drawer" layoutX="-1.0" prefHeight="666.0" prefWidth="222.0" />
+   </children>
+</AnchorPane>

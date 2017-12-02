@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="592.0" prefWidth="855.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Particip_randController">
+    <stylesheets>
+        <URL value="@/styles/particip_rand.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="841.0" fitWidth="1386.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/pexels-photo.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="table_participer" layoutX="160.0" layoutY="68.0" prefHeight="267.0" prefWidth="798.0" />
+      <Button fx:id="btn_participer" layoutX="261.0" layoutY="470.0" mnemonicParsing="false" onAction="#Participer_rand" prefHeight="25.0" prefWidth="186.0" text="Participer" />
+      <Label layoutX="525.0" layoutY="20.0" text="Liste des randonnées">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="annuler_rand" layoutX="261.0" layoutY="519.0" mnemonicParsing="false" onAction="#ActionAnnuler" prefHeight="25.0" prefWidth="186.0" text="Annuler randonnée" />
+      <TableView fx:id="table_participer_in" layoutX="799.0" layoutY="421.0" prefHeight="256.0" prefWidth="409.0" />
+      <Label layoutX="851.0" layoutY="377.0" text="Ma liste de participation" textFill="#111010">
+         <font>
+            <Font name="System Bold Italic" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="map_rand" layoutX="261.0" layoutY="567.0" mnemonicParsing="false" onAction="#Actionmap" prefHeight="25.0" prefWidth="186.0" text="Map" />
+      <Button fx:id="mail_id" layoutX="259.0" layoutY="623.0" mnemonicParsing="false" onAction="#Actionenvoyer" prefHeight="25.0" prefWidth="186.0" text="Envoyer mail" />
+   </children>
+</AnchorPane>

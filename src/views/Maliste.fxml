@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="505.0" prefWidth="676.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.MalisteController">
+   <children>
+      <TableView fx:id="table_participer_in" layoutX="46.0" layoutY="59.0" prefHeight="235.0" prefWidth="584.0" />
+      <Button fx:id="annuler_participation" layoutX="274.0" layoutY="346.0" mnemonicParsing="false" onAction="#ActionAnnulerParticipation" text="Anuuler participation" />
+   </children>
+</AnchorPane>
